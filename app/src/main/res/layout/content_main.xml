@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main"
+    >
+
+    <LinearLayout
+        android:id="@+id/features_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/rounded_background"
+                android:padding="12dp"
+                android:src="@drawable/locationpredict" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Find location"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/rounded_background"
+                android:padding="12dp"
+                android:src="@drawable/foodpredict" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Find delicious food"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/predict_button"
+        app:layout_constraintTop_toBottomOf="@id/features_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:spacing="12dp">
+
+            <TextView
+                style="@style/FeatureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Analyze photos to identify dishes or locations" />
+
+            <TextView
+                style="@style/FeatureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Provides information about the identified items, including reviews, ratings, and related places nearby." />
+
+            <TextView
+                style="@style/FeatureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Allows you to upload an image of food or a location, and it suggests related dishes, recipes, or places to visit." />
+
+            <TextView
+                style="@style/FeatureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload images of food or places to match with reviews and recommendations for restaurants and landmarks in Ho Chi Minh City." />
+
+            <TextView
+                style="@style/FeatureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A reverse image search tool that can identify locations or food images and link them to relevant sites" />
+
+            <TextView
+                style="@style/FeatureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Identifies food or landmarks based on keywords or images and provides user reviews, ratings, and recommendations for places in the city." />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/predict_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:text="Predict"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <!--    <fragment-->
+<!--        android:id="@+id/nav_host_fragment_content_main"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:navGraph="@navigation/mobile_navigation" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
